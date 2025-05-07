@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memo</title>
+    <title>Memorize - Flashcard App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <link rel="stylesheet" href="./style.css"/>
@@ -299,17 +299,33 @@
             }
         });
 
-        // Update account display
+        // updateAccountDisplay fonksiyonunu şu şekilde değiştirin
         function updateAccountDisplay() {
             checkAuthState().then(userData => {
                 if (userData) {
                     document.getElementById('accountName').textContent = userData.displayName || userData.email.split('@')[0];
                     document.getElementById('accountEmail').textContent = userData.email;
                     document.getElementById('accountAvatar').textContent = (userData.displayName || userData.email)[0].toUpperCase();
+                    
+                    // Kullanıcı giriş yapmışsa Logout butonu göster
+                    document.getElementById('logoutButton').innerHTML = `
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    `;
+                    document.getElementById('logoutButton').onclick = handleLogout;
                 } else {
                     document.getElementById('accountName').textContent = 'Guest';
                     document.getElementById('accountEmail').textContent = 'Not logged in';
                     document.getElementById('accountAvatar').textContent = '?';
+                    
+                    // Kullanıcı giriş yapmamışsa Login butonu göster
+                    document.getElementById('logoutButton').innerHTML = `
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    `;
+                    document.getElementById('logoutButton').onclick = function() {
+                        goToPage('login.html');
+                    };
                 }
             });
         }
