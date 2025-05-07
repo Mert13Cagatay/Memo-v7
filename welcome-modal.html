@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo - Welcome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .welcome-modal {
+            width: 90%;
+            max-width: 700px;
+            background-color: var(--bg-primary);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            color: var(--text-primary);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pixel-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        .subtitle {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .section-content {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .close-btn {
+            background-color: var(--accent-color);
+            color: var(--bg-primary);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 10px;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .welcome-modal {
+                padding: 20px;
+                width: 95%;
+            }
+            
+            .pixel-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <script src="theme-loader.js"></script>
+</head>
+<body>
+    <div class="welcome-modal">
+        <div class="modal-header">
+            <div class="pixel-title">MEMO</div>
+            <div class="subtitle">Your Personal Learning Assistant</div>
+        </div>
+
+        <p>Hello! I'm Mert, a senior Industrial Engineering student at Istanbul Technical University. I developed this flashcard application called "Memo" to improve my coding skills and help fellow students. Considering the cost and complexity of alternatives in the market, I hope Memo will be an ideal solution for you.</p>
+
+        <div class="section-title">WHY MEMO?</div>
+        <div class="section-content">
+            <ul>
+                <li><strong>Completely Free:</strong> No hidden fees or premium features</li>
+                <li><strong>User-Friendly:</strong> Intuitive interface, minimal design</li>
+                <li><strong>Fast and Efficient:</strong> Designed to accelerate your learning process</li>
+                <li><strong>Works Offline:</strong> Can function without an internet connection</li>
+                <li><strong>Privacy-Focused:</strong> Your data is stored only on your device</li>
+            </ul>
+        </div>
+
+        <div class="section-title">CLOSED BETA TEST</div>
+        <div class="section-content">
+            <p>I invite you to participate in the closed beta test to gather initial feedback. Your feedback will be invaluable for improving the application and fixing bugs.</p>
+            
+            <p><strong>Feedback Suggestions:</strong></p>
+            
+            <p><strong>Functional Evaluation:</strong></p>
+            <ul>
+                <li>Are all buttons and menus working correctly?</li>
+                <li>Is deck creation and editing working smoothly?</li>
+                <li>Were you able to flip between the front and back of the cards?</li>
+                <li>Did you experience any crashes or freezes?</li>
+            </ul>
+            
+            <p><strong>User Experience:</strong></p>
+            <ul>
+                <li>How intuitive is the application? Is it easy to use?</li>
+                <li>Did you have any difficulties navigating between menus?</li>
+                <li>Would you suggest any improvements to the design or navigation?</li>
+            </ul>
+            
+            <p><strong>Visual Design:</strong></p>
+            <ul>
+                <li>Do you find the color scheme and fonts pleasing?</li>
+                <li>Are the buttons and elements appropriately sized?</li>
+                <li>Do all elements display correctly on your mobile device?</li>
+            </ul>
+            
+            <p><strong>Feature Requests:</strong></p>
+            <ul>
+                <li>Are there any features you would like to see added?</li>
+                <li>What are your suggestions for changes to existing features?</li>
+            </ul>
+            
+            <p>Since this is a closed test, I cannot receive anonymous feedback. Please send all your comments, suggestions, and issues directly to me via WhatsApp or my email(mertcagatay4@gmail.com).</p>
+        </div>
+
+        <div class="section-title">GETTING STARTED</div>
+        <div class="section-content">
+            <ol>
+                <li><strong>Account Creation:</strong> You need to create an account before starting. Don't worry, your password and email information are securely encrypted and accessible only to you.</li>
+                <li><strong>Decks:</strong> You have many options:
+                    <ul>
+                        <li>You can choose one of the ready-made decks like "English B2/A2 levels or Turkish History".</li>
+                        <li>You can create your own deck (I recommend creating your own deck for feedback purposes)</li>
+                    </ul>
+                </li>
+                <li><strong>Home Page:</strong> There are two main buttons:
+                    <ul>
+                        <li>"+" button: To create a new deck</li>
+                        <li>"→" button: To view your existing decks</li>
+                    </ul>
+                </li>
+                <li><strong>Settings:</strong> You can adjust your visual preferences:
+                    <ul>
+                        <li>Adjust font size</li>
+                        <li>Dark/light theme options</li>
+                        <li>Other display preferences</li>
+                    </ul>
+                </li>
+                <li><strong>Account Page:</strong> You can track your learning performance:
+                    <ul>
+                        <li>Your study statistics</li>
+                        <li>Your correct/incorrect ratios</li>
+                        <li>Your study history</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section-title">LIMITATIONS</div>
+        <div class="section-content">
+            <p>Some features may not be fully developed in this beta version. Reporting any issues you encounter will help me improve these features.</p>
+        </div>
+
+        <p class="signature">Thank you in advance for testing Memo! I believe your feedback will help me develop a better application. If you have any questions or suggestions, please don't hesitate to contact me via WhatsApp or email.<br>Happy studying and efficient learning!<br>Mert</p>
+
+        <button class="close-btn" onclick="closeModal()">GOT IT</button>
+    </div>
+
+    <script>
+        function closeModal() {
+            // Send modal closing message to parent page
+            window.parent.postMessage('closeModal', '*');
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+
+    <!-- Firebase Configuration -->
+    <script>
+    // Your Firebase project configuration
+    
+    const firebaseConfig = {
+        apiKey: "AIzaSyBa0oIiq9e-NFbn4-mhVTL6OQjBeNxFhcs",
+        authDomain: "memo-web-75603.firebaseapp.com",
+        projectId: "memo-web-75603",
+        storageBucket: "memo-web-75603.firebasestorage.app",
+        messagingSenderId: "962592461391",
+        appId: "1:962592461391:web:58cf3507582dc46fba903a",
+        measurementId: "G-BPJY5XR1TS"
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+    // Get Auth and Firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    
+    // Enable offline data persistence
+    db.enablePersistence()
+        .then(() => {
+        console.log("Offline persistence enabled");
+        })
+        .catch((err) => {
+        if (err.code == 'failed-precondition') {
+            // Multiple tabs open, persistence can only be enabled in one tab at a time
+            console.warn("Persistence failed: Multiple tabs open");
+        } else if (err.code == 'unimplemented') {
+            // The browser doesn't support persistence
+            console.warn("Persistence not supported by browser");
+        }
+        });
+    </script>
+    <script src="firebase-auth.js"></script>
+    
+</body>
+</html>
